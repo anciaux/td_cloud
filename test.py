@@ -255,7 +255,7 @@ stopwords += additional_stopwords
 stopwords = set(stopwords)
 stopwords = '\n'.join(stopwords)
 
-st.text_area("Words to ignore", value=stopwords)
+text_box = st.text_area("Words to ignore", value=stopwords)
 _file = st.file_uploader('Upload your text file here')
 
 
@@ -269,7 +269,7 @@ if _file is not None:
 
     wordcloud = WordCloud(width=1500, height=int(1500*9/16),
                           background_color='white',
-                          stopwords=stopwords.split(),
+                          stopwords=text_box.split(),
                           min_font_size=10).generate(comment_words)
 
     fig = plt.figure(figsize=(8, 8), facecolor=None)
