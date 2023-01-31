@@ -8,6 +8,8 @@ st.title("EPFL Teaching Day 2023: word cloud")
 
 additional_stopwords = """
 e.g.
+eg.
+etc
 tout
 grand
 petit
